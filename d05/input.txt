@@ -1,0 +1,7 @@
+This is
+a sample
+text file
+with nothing
+in it
+just to test
+reading a file
