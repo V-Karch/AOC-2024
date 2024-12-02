@@ -12,5 +12,5 @@ func main() {
 		return
 	}
 
-	fmt.Println(contents)
+	fmt.Println(string(contents))
 }
