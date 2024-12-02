@@ -18,26 +18,12 @@ func main() {
 	result1 := part1(fileContents)
 	fmt.Printf("Part 1: %d\n", result1)
 
-	fmt.Println("...")
+	result2 := part2(fileContents)
+	fmt.Printf("Part 2: %d\n", result2)
 }
 
 func part1(input string) int {
-	lines := strings.Split(strings.TrimSpace(input), "\n")
-	var data [][]int
-	for _, line := range lines {
-		stringValues := strings.Fields(line)
-		var intValues []int
-		for _, str := range stringValues {
-			value, err := strconv.Atoi(str)
-			if err != nil {
-				fmt.Printf("Error converting '%s' to integer: %v\n", str, err)
-				return 0
-			}
-			intValues = append(intValues, value)
-		}
-		data = append(data, intValues)
-	}
-
+	data := parseInput(input)
 	safeCount := 0
 	for _, report := range data {
 		if isSafe(report) {
@@ -45,6 +31,28 @@ func part1(input string) int {
 		}
 	}
 	return safeCount
+}
+
+func part2(input string) int {
+	data := parseInput(input)
+	safeCount := 0
+	for _, report := range data {
+		if isSafe(report) || canBeMadeSafe(report) {
+			safeCount++
+		}
+	}
+	return safeCount
+}
+
+func canBeMadeSafe(report []int) bool {
+	for i := 0; i < len(report); i++ {
+		modifiedReport := append([]int{}, report[:i]...)
+		modifiedReport = append(modifiedReport, report[i+1:]...)
+		if isSafe(modifiedReport) {
+			return true
+		}
+	}
+	return false
 }
 
 func isSafe(report []int) bool {
@@ -71,6 +79,25 @@ func isSafe(report []int) bool {
 	}
 
 	return true
+}
+
+func parseInput(input string) [][]int {
+	lines := strings.Split(strings.TrimSpace(input), "\n")
+	var data [][]int
+	for _, line := range lines {
+		stringValues := strings.Fields(line)
+		var intValues []int
+		for _, str := range stringValues {
+			value, err := strconv.Atoi(str)
+			if err != nil {
+				fmt.Printf("Error converting '%s' to integer: %v\n", str, err)
+				return nil
+			}
+			intValues = append(intValues, value)
+		}
+		data = append(data, intValues)
+	}
+	return data
 }
 
 func readFile(filename string) (string, error) {
