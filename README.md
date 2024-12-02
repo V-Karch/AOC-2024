@@ -8,7 +8,7 @@ Day 4 - JavaScript
 Day 5 - Java  
 Day 6 - Haskell  
 Day 7 - R  
-Day 8 - C  
+Day 8 - C++  
 Day 9 - Lisp  
 Day 10 - Shell  
   
