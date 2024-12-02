@@ -6,7 +6,7 @@ Day 2 - Golang ✅/✅
 Day 3 - Ruby  
 Day 4 - JavaScript  
 Day 5 - Java  
-Day 6 - Haskell (it seems as though my computer refuses to compile haskell code and as such I will be doing Rust again instead)  
+Day 6 - Haskell  
 Day 7 - R  
 Day 8 - C++  
 Day 9 - Lisp  
