@@ -5,7 +5,7 @@ Advent of code 2024, random language every day challenge
 |------|---------------|--------|
 | Day 1  | Rust          | ✅/✅   |
 | Day 2  | Golang        | ✅/✅   |
-| Day 3  | Ruby          | 🟨/🟨   |
+| Day 3  | Ruby          | ✅/✅   |
 | Day 4  | JavaScript    | 🟨/🟨   |
 | Day 5  | Java          | 🟨/🟨   |
 | Day 6  | Haskell       | 🟨/🟨   |
