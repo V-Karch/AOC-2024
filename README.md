@@ -33,7 +33,6 @@ Advent of code 2024, random language every day challenge
 
 Language spread as of the end of day 3
 
-Language Spread for repository V-Karch/AOC-2024:  
 ----------------------------------------  
 - Go: 2207 bytes  
 - Rust: 1866 bytes  
