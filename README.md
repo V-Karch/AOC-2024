@@ -31,7 +31,7 @@ Advent of code 2024, random language every day challenge
 
 ------------------------------------------------
 
-Language spread as of the end of day 3  
+Language spread as of the end of day 4  
 ----------------------------------------  
 
 - JavaScript: 4514 bytes  
