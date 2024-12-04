@@ -2,20 +2,27 @@ import fs from "fs";
 
 function main() {
     const grid = getFileContentsAsGrid();
+
     const horizontals = extractHorizontalLines(grid);
     const verticals = extractVerticalLines(grid);
     const diagonals = extractDiagonalLines(grid);
 
-    console.log("Horizontal lines:", horizontals);
-    console.log("Vertical lines:", verticals);
-    console.log("Diagonal lines:", diagonals);
+    const allLines = [...horizontals, ...verticals, ...diagonals];
+
+    const xmasCount = countOccurrences(allLines, "XMAS");
+    const samxCount = countOccurrences(allLines, "SAMX");
+
+    console.log(xmasCount + samxCount);
 }
 
 function getFileContentsAsGrid() {
     try {
         const fileContents = fs.readFileSync("input.txt", "utf8");
-        const lines = fileContents.split(/\r?\n/).filter(line => line.trim() !== ""); // Filter out empty lines
-        return lines.map(line => line.split("")); // Split each line into characters
+        // Split into lines and then split each line into characters
+        return fileContents
+            .split(/\r?\n/)
+            .filter(line => line.trim() !== "")
+            .map(line => [...line]); // Convert each line into an array of characters
     } catch (error) {
         console.error(`Error reading file: ${error.message}`);
         return [];
@@ -23,7 +30,7 @@ function getFileContentsAsGrid() {
 }
 
 function extractHorizontalLines(grid) {
-    return grid.map(row => row.join(""));
+    return grid.map(row => row.join("")); // Join characters in each row to form strings
 }
 
 function extractVerticalLines(grid) {
@@ -70,6 +77,18 @@ function extractDiagonalLines(grid) {
     }
 
     return diagonals;
+}
+
+function countOccurrences(lines, searchStr) {
+    let count = 0;
+    const searchRegex = new RegExp(searchStr, "g"); // Create a regex for global search
+    for (const line of lines) {
+        const matches = line.match(searchRegex); // Match all occurrences in the line
+        if (matches) {
+            count += matches.length; // Add the number of matches to the count
+        }
+    }
+    return count;
 }
 
 main();
