@@ -1,6 +1,10 @@
 import fs from "fs";
 
 function main() {
+    console.log("Part 1: " + part1());
+}
+
+function part1() {
     const grid = getFileContentsAsGrid();
 
     const horizontals = extractHorizontalLines(grid);
@@ -12,7 +16,7 @@ function main() {
     const xmasCount = countOccurrences(allLines, "XMAS");
     const samxCount = countOccurrences(allLines, "SAMX");
 
-    console.log(xmasCount + samxCount);
+    return xmasCount + samxCount;
 }
 
 function getFileContentsAsGrid() {
