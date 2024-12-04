@@ -31,21 +31,21 @@ Advent of code 2024, random language every day challenge
 
 ------------------------------------------------
 
-Language spread as of the end of day 3
-
+Language spread as of the end of day 3  
 ----------------------------------------  
+
+- JavaScript: 4514 bytes  
 - Go: 2207 bytes  
 - Rust: 1866 bytes  
 - Ruby: 1267 bytes  
 - Common Lisp: 656 bytes  
 - C++: 504 bytes  
-- JavaScript: 422 bytes  
 - C#: 408 bytes  
 - Java: 308 bytes  
 - Lua: 267 bytes  
 - Haskell: 257 bytes  
 - Shell: 113 bytes  
 - Python: 93 bytes  
-- R: 55 bytes  
+- R: 55 bytes
   
-Total bytes of code: 8423 bytes  
+Total bytes of code: 12515 bytes  
