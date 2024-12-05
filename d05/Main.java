@@ -8,6 +8,12 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
         List<String> lines = Files.readAllLines(Paths.get("input.txt"));
+
+        int part1Result = part1(lines);
+        System.out.println("Part 1: " + part1Result);
+    }
+
+    public static int part1(List<String> lines) {
         ArrayList<Rule> rules = new ArrayList<>();
         ArrayList<String> validLines = new ArrayList<>(); 
 
@@ -22,21 +28,30 @@ public class Main {
             }
 
             if (line.contains(",")) {
-                boolean lineIsValid = true; // Assume valid unless invalid
-
+                boolean validRule = true;
                 for (Rule rule: rules) {
-                    if (!rule.validateRule(line)) { // If invalid, set to false, exit loop
-                        lineIsValid = false;
-                        break;
+                    if (!rule.validateRule(line)) {
+                        validRule = false;
                     }
                 }
 
-                if (lineIsValid) {
+                if (validRule) {
                     validLines.add(line);
                 }
             }
         }
 
-        System.out.println(lines);
+        int total = 0;
+
+        for (String validLine: validLines) {
+            total += Integer.valueOf(findMiddle(validLine));
+        }
+
+        return total;
+    }
+
+    public static String findMiddle(String input) {
+        String[] splitString = input.split(",");
+        return splitString[splitString.length / 2];
     }
 }

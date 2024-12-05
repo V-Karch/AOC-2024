@@ -15,7 +15,28 @@ public class Rule {
             actualValues.add(Integer.valueOf(value));
         } // Add to arraylist
         
-        return false; // Placeholder
+        int firstIndex = -1;
+        int secondIndex = -1;
+
+        for (int i = 0; i < actualValues.size(); i++) {
+            if (actualValues.get(i) == this.first) {
+                firstIndex = i;
+            }
+
+            if (actualValues.get(i) == this.second) {
+                secondIndex = i;
+            }
+        }
+
+        if (firstIndex == -1 || secondIndex == -1) {
+            return true; // If either are not found returnt rue
+        }
+
+        if (firstIndex < secondIndex) {
+            return true; // Return true if the first is before the second
+        }
+
+        return false; // otherwise return false
     } 
 
     @Override
