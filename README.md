@@ -7,7 +7,7 @@ Advent of code 2024, random language every day challenge
 | Day 2  | Golang        | ✅/✅   |
 | Day 3  | Ruby          | ✅/✅   |
 | Day 4  | JavaScript    | ✅/⚠️   |
-| Day 5  | Java          | 🟨/🟨   |
+| Day 5  | Java          | ✅/✅   |
 | Day 6  | Haskell       | 🟨/🟨   |
 | Day 7  | R             | 🟨/🟨   |
 | Day 8  | C++           | 🟨/🟨   |
