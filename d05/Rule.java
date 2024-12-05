@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Rule {
     private int first, second;
 
@@ -7,7 +9,12 @@ public class Rule {
     }
 
     public boolean validateRule(String input) {
-        // Remember to implement this
+        ArrayList<Integer> actualValues = new ArrayList<>();
+
+        for (String value: input.split(",")) {
+            actualValues.add(Integer.valueOf(value));
+        } // Add to arraylist
+        
         return false; // Placeholder
     } 
 

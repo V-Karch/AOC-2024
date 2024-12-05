@@ -31,10 +31,12 @@ public class Main {
                     }
                 }
 
-                validLines.add(line);
+                if (lineIsValid) {
+                    validLines.add(line);
+                }
             }
         }
 
-        System.out.println(rules);
+        System.out.println(lines);
     }
 }
