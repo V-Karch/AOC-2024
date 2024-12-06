@@ -33,11 +33,12 @@ Advent of code 2024, random language every day challenge
 
 Note on d06: [failed to solve part 2 in haskell, got the answer via python but could not successfully translate the python code into haskell](https://github.com/V-Karch/AOC-2024/commit/65ce1b9f863362bcef58726d90533fe22f91c8df)
   
-Language spread as of the end of day 5  
+Language spread as of the end of day 6  
 ----------------------------------------  
 
 - Java: 6100 bytes
 - JavaScript: 4514 bytes
+- Haskell: 2465 bytes
 - Go: 2207 bytes
 - Rust: 1866 bytes
 - Ruby: 1267 bytes
@@ -45,9 +46,8 @@ Language spread as of the end of day 5
 - C++: 504 bytes
 - C#: 408 bytes
 - Lua: 267 bytes
-- Haskell: 257 bytes
 - Shell: 224 bytes
 - Python: 93 bytes
 - R: 55 bytes
-
-Total bytes of code: 18418 bytes
+  
+Total bytes of code: 20626 bytes
