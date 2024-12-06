@@ -30,6 +30,8 @@ Advent of code 2024, random language every day challenge
 | Day 25 | Rust          | 🟨/🟨   |
 
 ------------------------------------------------
+
+Note on d06: [failed to solve part 2 in haskell, got the answer via python but could not successfully translate the python code into haskell](https://github.com/V-Karch/AOC-2024/commit/65ce1b9f863362bcef58726d90533fe22f91c8df)
   
 Language spread as of the end of day 5  
 ----------------------------------------  
