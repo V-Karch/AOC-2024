@@ -8,7 +8,7 @@ Advent of code 2024, random language every day challenge
 | Day 3  | Ruby          | ✅/✅   |
 | Day 4  | JavaScript    | ✅/⚠️   |
 | Day 5  | Java          | ✅/✅   |
-| Day 6  | Haskell       | ✅/🟨   |
+| Day 6  | Haskell       | ✅/❌   |
 | Day 7  | R             | 🟨/🟨   |
 | Day 8  | C++           | 🟨/🟨   |
 | Day 9  | Lisp          | 🟨/🟨   |
@@ -30,7 +30,7 @@ Advent of code 2024, random language every day challenge
 | Day 25 | Rust          | 🟨/🟨   |
 
 ------------------------------------------------
-
+  
 Language spread as of the end of day 5  
 ----------------------------------------  
 
